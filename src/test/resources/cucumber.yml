@@ -1,0 +1,4 @@
+
+#Beans
+config:
+  class: es.axa.test.config.Config
