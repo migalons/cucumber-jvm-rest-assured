@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "repositories",
+  "type": "array",
+  "items": {
+    "title": "Product",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "node_id": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "full_name": {
+        "type": "string"
+      },
+      "private": {
+        "type": "boolean"
+      },
+      "topics": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "minItems": 1,
+        "uniqueItems": true
+      },
+      "owner": {
+        "type": "object",
+        "properties": {
+          "login": {"type": "string"},
+          "id": {"type": "number"},
+          "url": {"type": "string"}
+        },
+        "required": ["login", "id", "url"]
+      }
+    },
+    "required": ["id", "name", "owner"]
+  }
+}

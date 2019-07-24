@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "repositories",
+  "type": "array",
+  "items": {
+    "title": "Product",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "number"
+      },
+      "login": {
+        "type": "string"
+      },
+      "type": {
+        "type": "string"
+      },
+      "site_admin": {
+        "type": "boolean"
+      }
+    },
+    "required": ["id", "login", "type", "site_admin"]
+  }
+}
